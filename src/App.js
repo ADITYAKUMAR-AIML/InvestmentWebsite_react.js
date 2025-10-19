@@ -4,6 +4,7 @@ import InvestmentDashboard from './InvestmentDashboard';
 import LearningCenter from './LearningCenter';
 import StockDetail from './StockDetail';
 import './App.css';
+import AddInvestment from './AddInvestment';
 
 function Navigation() {
   const navigate = useNavigate();
@@ -55,6 +56,7 @@ function App() {
             <Route path="/dashboard" element={<InvestmentDashboard />} />
             <Route path="/learning" element={<LearningCenter />} />
             <Route path="/stock/:symbol" element={<StockDetail />} />
+            <Route path="/add-investment" element={<AddInvestment />} />
           </Routes>
         </main>
       </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 const InvestmentDashboard = () => {
+  const navigate = useNavigate();
   const [portfolioData, setPortfolioData] = useState({
     totalValue: 12500.75,
     dailyChange: 245.50,
@@ -60,7 +62,7 @@ const InvestmentDashboard = () => {
       <header className="dashboard-header">
         <h1>Investment Dashboard</h1>
         <div className="header-actions">
-          <button className="btn-primary">Add Investment</button>
+          <button className="btn-primary" onClick={() => navigate('/add-investment')}>Add Investment</button>
           <button className="btn-secondary">Export Report</button>
         </div>
       </header>
